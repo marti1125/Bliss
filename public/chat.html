@@ -1,69 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!-- Latest compiled and minified CSS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat section</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/chat.css">
 
-    <script
-        src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
-    <script src="chat.js"></script>
 </head>
-<body>
+
+<body class="bg">
     <div class="container">
-    <div class="row form-group">
-        <div class="col-xs-12 col-md-offset-2 col-md-8 col-lg-8 col-lg-offset-2 my-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <span class="glyphicon glyphicon-comment"></span>Find your chatting buddy
-                </div>
-                <div class="panel-body body-panel">
-                    <ul class="chat">
-                        
-                    </ul>
-                </div>
-                <div class="panel-footer clearfix">
-                    <textarea id="message" class="form-control" rows="3"></textarea>
-                    <span class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" style="margin-top: 10px">
-                        <button class="btn btn-warning btn-lg btn-block" id="btn-chat">Send</button>
-                    </span>
-                </div>
+        <div class="row no-gutters">
+          <div class="col-md-4 border-right">
+          <div class="settings-tray">
+            <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/filip.jpg" alt="Profile img">
+            <span class="settings-tray--right">
+            <i class="material-icons"><h4>Messages From your Matches</h4></i>
+            </span>
+          </div>
+          <div class="search-box">
+            <div class="input-wrapper">
+            <i class="material-icons"><h4>
+            <input placeholder="Search here" type="text">
+            <button type="button" class="btn btn-outline-warning">Search</button>
             </div>
+          </div>
+          <div class="friend-drawer friend-drawer--onhover">
+            <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg" alt="">
+            <div class="text">
+            <h6>Robo Cop</h6>
+            <p class="text-muted">Hey, darling how are you!</p>
+            </div>
+            <span class="time text-muted small">13:21</span>
+          </div>
+          <hr>
+          <div class="friend-drawer friend-drawer--onhover">
+            <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg" alt="">
+            <div class="text">
+            <h6>Optimus</h6>
+            <p class="text-muted">Wanna grab a beer?</p>
+            </div>
+            <span class="time text-muted small">00:32</span>
+          </div>
+          <hr>
+          <div class="friend-drawer friend-drawer--onhover ">
+            <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/real-terminator.png" alt="">
+            <div class="text">
+            <h6>Skynet</h6>
+            <p class="text-muted">Seen that canned piece of s?</p>
+            </div>
+            <span class="time text-muted small">13:21</span>
+          </div>
+          <hr>
+          <div class="friend-drawer friend-drawer--onhover">
+            <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/termy.jpg" alt="">
+            <div class="text">
+            <h6>Termy</h6>
+            <p class="text-muted">Im studying spanish...</p>
+            </div>
+            <span class="time text-muted small">13:21</span>
+          </div>
+          <hr>
+          <div class="friend-drawer friend-drawer--onhover">
+            <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rick.jpg" alt="">
+            <div class="text">
+            <h6>Richard</h6>
+            <p class="text-muted">I'm not sure...</p>
+            </div>
+            <span class="time text-muted small">13:21</span>
+          </div>
+          <hr>
+          <div class="friend-drawer friend-drawer--onhover">
+            <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rachel.jpeg" alt="">
+            <div class="text">
+            <h6>John</h6>
+            <p class="text-muted">Hi, wanna see something?</p>
+            </div>
+            <span class="time text-muted small">13:21</span>
+          </div>
+          </div>
+          <div class="col-md-8">
+          <div class="settings-tray">
+            <div class="friend-drawer no-gutters friend-drawer--grey">
+            <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg" alt="">
+            <div class="text">
+              <h6>Robo Cop</h6>
+              <p class="text-muted">Online Now..</p>
+            </div>
+            </div>
+          </div>
+          <div class="chat-panel">
+            <div class="row no-gutters">
+            <div class="col-md-3">
+              <div class="chat-bubble chat-bubble--left">
+              Hello dude!
+              </div>
+            </div>
+            </div>
+            <div class="row no-gutters">
+            <div class="col-md-3 offset-md-9">
+              <div class="chat-bubble chat-bubble--right">
+              How are you?
+              </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-12">
+              <div class="chat-box-tray">
+              <i class="material-icons"><h4>Options</h4></i>
+              <input type="text" placeholder="Type your message here...">
+              <button type="button" class="btn btn-outline-primary">Send</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
         </div>
-    </div>
-</div>
-
-<script id="new-message-other" type="text/template">
-    <li class="left clearfix">
-        <span class="chat-img pull-left">
-            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
-        </span>
-        <div class="chat-body clearfix">
-            <p>
-                {{body}}
-            </p>
         </div>
-    </li>
-</script>
-
-<script id="new-message" type="text/template">
-    <li id="{{id}}" class="right clearfix">
-        <div class="chat-body clearfix">
-            <p>
-                {{body}}
-            </p>
-        </div>
-    </li>
-</script>
-
+        <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+        <script src="chat.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
 </body>
 </html>
