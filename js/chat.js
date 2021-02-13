@@ -24,3 +24,8 @@ $(document).ready(function(){
         $(".chat").append(template);
     }
 });
+$( '.friend-drawer--onhover' ).on( 'click',  function() {
+  
+    $( '.chat-bubble' ).hide('slow').show('slow');
+    
+  });
