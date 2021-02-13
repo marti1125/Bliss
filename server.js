@@ -18,6 +18,10 @@ app.get('/chat',function(req,res){
   res.sendFile('/public/chat.html', {root: __dirname });
 });
 
+app.get('/faq',function(req,res){      
+  res.sendFile('/public/faq.html', {root: __dirname });
+});
+
 app.get('/dashboard',function(req,res){      
   res.sendFile('/public/dashboard.html', {root: __dirname });
 });
