@@ -6,10 +6,10 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const APP_ID = ''
-const APP_KEY = ''
-const APP_SECRET = ''
-const CLUSTER = 'eu'
+const APP_ID =  process.env.APP_ID || '';
+const APP_KEY = process.env.APP_KEY || '';
+const APP_SECRET = process.env.APP_SECRET || '';
+const CLUSTER = process.env.CLUSTER || '';
 
 var pusher = new Pusher({ appId: APP_ID, key: APP_KEY, secret:  APP_SECRET, cluster: CLUSTER });
 

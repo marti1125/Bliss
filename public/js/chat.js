@@ -1,8 +1,8 @@
 $(document).ready(function(){
     Pusher.logToConsole = true;
 
-    var pusher = new Pusher('APP_KEY', {
-        cluster: 'eu',
+    var pusher = new Pusher('e8d2132d16a15b682cc4', {
+        cluster: 'mt1',
         encrypted: false
     });
 
@@ -10,18 +10,19 @@ $(document).ready(function(){
     channel.bind('message-added', onMessageAdded);
 
     $('#btn-chat').click(function(){
-        const message = $("#message").val();
-        $("#message").val("");
+        const message = $("#chat-message").val();
+        $("#chat-message").val("");
 
         //send message
-        $.post( "http://localhost:5000/message", { message } );
+        $.post( "https://rocky-reaches-72297.herokuapp.com/message", { message } );
     });
 
     function onMessageAdded(data) {
-        let template = $("#new-message").html();
+        let template = $("#response-template").html();
+        console.log(data.message)
         template = template.replace("{{body}}", data.message);
 
-        $(".chat").append(template);
+        $("#message_pusher").append(template);
     }
 });
 $( '.friend-drawer--onhover' ).on( 'click',  function() {
