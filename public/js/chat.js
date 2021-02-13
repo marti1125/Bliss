@@ -28,5 +28,7 @@ $(document).ready(function(){
 $( '.friend-drawer--onhover' ).on( 'click',  function() {
 
     $( '.chat-bubble' ).hide('slow').show('slow');
+    // clean chat :P
+    $('#message_pusher').html('')
 
 });

@@ -24,3 +24,5 @@
 * https://pusher.com/
 * https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles
 * https://codepen.io/suez/pen/MaeVBy
+* https://johnresig.com/blog/javascript-micro-templating/
+* https://stackoverflow.com/questions/18673860/defining-a-html-template-to-append-using-jquery
