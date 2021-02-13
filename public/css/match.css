@@ -85,13 +85,16 @@
 }
 .demo__card__img {
   overflow: hidden;
-  width: 10rem;
-  height: 10rem;
+  width: 20rem;
+  height: 20rem;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
-  border: 0.5rem solid #fff;
-  background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg');
+  border: 0.5rem solid #fff;  
   background-size: cover;
+}
+.demo__card__img img {
+  width: 20rem;
+  height: 20rem;
 }
 .demo__card__name {
   text-align: center;
