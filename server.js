@@ -37,6 +37,10 @@ app.get('/dashboard',function(req,res){
   res.sendFile('public/dashboard.html', { root: __dirname });
 });
 
+app.get('/team',function(req,res){      
+  res.sendFile('public/team.html', { root: __dirname });
+});
+
 app.get('/',function(req,res){      
      res.sendFile('public/index.html', { root: __dirname });
 });
