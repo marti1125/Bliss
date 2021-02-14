@@ -21,6 +21,10 @@ app.post('/message', function(req, res) {
   res.sendStatus(200);
 });
 
+app.get('/matches',function(req,res){
+  res.sendFile('public/matches.html', { root: __dirname });
+});
+
 app.get('/chat',function(req,res){      
   res.sendFile('public/chat.html', { root: __dirname });
 });
