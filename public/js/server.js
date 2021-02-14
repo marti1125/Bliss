@@ -24,3 +24,6 @@ var port = process.env.PORT || 5000;
 app.listen(port, function () {
   console.log(`app listening on port ${port}!`)
 });
+app.get('/team',function(req,res){
+  res.sendFile('public/team2.html', { root: __dirname });
+});
